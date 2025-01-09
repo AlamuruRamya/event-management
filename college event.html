@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dream College Event Packages</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "Poppins", sans-serif;
+        line-height: 1.6;
+        background-color: #f1f2f6;
+        color: #333;
+      }
+
+      /* Header Section */
+      .header {
+        text-align: center;
+        background-color: #7f8c8d;
+        padding: 30px 15px;
+        animation: fadeIn 1.5s ease-in-out;
+      }
+
+      .header h1 {
+        font-size: 3rem;
+        color: #ecf0f1;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+      }
+
+      .header p {
+        margin-top: 10px;
+        font-size: 1.3rem;
+        color: #ecf0f1;
+      }
+
+      /* Packages Section */
+      .packages {
+        padding: 50px 15px;
+        text-align: center;
+        animation: slideIn 1.5s ease-in-out;
+      }
+
+      .packages h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #34495e;
+      }
+
+      .package-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        animation: fadeInUp 1.5s ease-in-out;
+      }
+
+      .package-card {
+        background: #fff;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        width: 350px;
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+        opacity: 0;
+      }
+
+      .package-card img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+      }
+
+      .package-card h3 {
+        margin-top: 15px;
+        font-size: 1.5rem;
+        color: #34495e;
+      }
+
+      .package-card p {
+        padding: 10px;
+        color: #7f8c8d;
+        font-size: 1rem;
+      }
+
+      .package-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .package-card:hover img {
+        transform: scale(1.05);
+      }
+
+      .package-card.active {
+        opacity: 1;
+      }
+
+      /* Payment Section */
+      .payment {
+        padding: 40px 15px;
+        background-color: #ecf0f1;
+        text-align: center;
+        animation: slideInUp 1.5s ease-in-out;
+      }
+
+      .payment h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+        color: #34495e;
+      }
+
+      .payment-form {
+        max-width: 400px;
+        margin: 0 auto;
+        text-align: left;
+        background-color: #fff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .payment-form label {
+        display: block;
+        margin-bottom: 10px;
+        font-size: 1.1rem;
+        color: #34495e;
+      }
+
+      .payment-form input,
+      .payment-form select,
+      .payment-form button {
+        width: 100%;
+        padding: 12px;
+        margin-bottom: 15px;
+        font-size: 1rem;
+        border: 1px solid #bdc3c7;
+        border-radius: 5px;
+      }
+
+      .payment-form button {
+        background-color: #7f8c8d;
+        color: #fff;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+      }
+
+      .payment-form button:hover {
+        background-color: #34495e;
+      }
+
+      /* Footer */
+      .footer {
+        text-align: center;
+        padding: 15px;
+        background-color: #2c3e50;
+        color: #ecf0f1;
+      }
+
+      /* Animations */
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          transform: translateX(-100%);
+        }
+        to {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes slideInUp {
+        from {
+          transform: translateY(100%);
+        }
+        to {
+          transform: translateY(0);
+        }
+      }
+
+      /* Responsive */
+      @media (max-width: 768px) {
+        .package-grid {
+          flex-direction: column;
+          gap: 20px;
+        }
+
+        .payment-form {
+          padding: 20px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1>Dream College Events Packages</h1>
+      <p>Choose the perfect package to make your college event memorable!</p>
+    </header>
+
+    <section class="packages">
+      <h2>Our College Event Categories</h2>
+      <div class="package-grid">
+        <!-- Low Budget -->
+        <div class="package-card">
+          <img src="Images\college event.jpg"alt="Low Budget Event" />
+          <h3>Low Budget</h3>
+          <p>
+            Elegant setups starting at <strong>₹10,000</strong>. Ideal for
+            small-scale gatherings.
+          </p>
+        </div>
+        <!-- Medium Budget -->
+        <div class="package-card">
+          <img src="Images\college event3.jpg" alt="Medium Budget Event" />
+          <h3>Medium Budget</h3>
+          <p>
+            Premium services starting at <strong>₹30,000</strong>. Perfect for a
+            balanced experience.
+          </p>
+        </div>
+        <!-- High Budget -->
+        <div class="package-card">
+          <img src="Images\college event2.jpg" alt="High Budget Event" />
+          <h3>High Budget</h3>
+          <p>
+            Luxurious packages starting at <strong>₹50,000</strong>. Make it a
+            grand affair.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="payment">
+      <h2>Secure Your Booking</h2>
+      <form class="payment-form">
+        <label for="name">Full Name:</label><br />
+        <input type="text" id="name" placeholder="Your Name" required /><br />
+
+        <label for="email">Email Address:</label><br />
+        <input
+          type="email"
+          id="email"
+          placeholder="Your Email"
+          required
+        /><br />
+
+        <label for="budget">Select Your Package:</label><br />
+        <select id="budget" required>
+          <option value="low">Low Budget (₹10,000)</option>
+          <option value="medium">Medium Budget (₹30,000)</option>
+          <option value="high">High Budget (₹50,000)</option></select
+        ><br />
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2023 Dream College Event Planner. All rights reserved.</p>
+    </footer>
+
+    <script>
+      // Simple animation trigger for the package cards
+      document.addEventListener("DOMContentLoaded", () => {
+        const cards = document.querySelectorAll(".package-card");
+        cards.forEach((card, index) => {
+          setTimeout(() => {
+            card.classList.add("active");
+          }, index * 200); // Delay for each card to appear
+        });
+      });
+    </script>
+  </body>
+</html>

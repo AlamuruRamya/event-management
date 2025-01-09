@@ -1,0 +1,288 @@
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Arial", sans-serif;
+}
+
+body {
+  background-color: #f1f5f9;
+  color: #333;
+  padding: 20px;
+  font-size: 16px;
+}
+
+/* Container for Event Cards */
+.container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+/* Section Header */
+h1 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Card Styling */
+.card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  display: block;
+  text-decoration: none;
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.card-content p {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.6;
+  margin: 15px 0;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+/* Button Styling */
+.card-button {
+  display: inline-block;
+  background-color: #ff6f61;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.card-button:hover {
+  background-color: #ff3b2f;
+}
+
+/* Animation Keyframes */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.card.animate {
+  animation: fadeInUp 1s ease-out forwards;
+}
+/* Global Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #f0f4f8;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+  text-align: center;
+  background-color: #6c757d;
+  color: #fff;
+  padding: 40px 15px;
+  border-bottom: 4px solid #ff6f61;
+}
+
+.header h1 {
+  font-size: 3rem;
+}
+
+.header p {
+  margin-top: 10px;
+  font-size: 1.5rem;
+}
+
+/* Wedding Packages Section */
+.packages {
+  padding: 50px 15px;
+  background: linear-gradient(135deg, #f0f4f8, #e9ecef);
+  text-align: center;
+}
+
+.packages h2 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #495057;
+}
+
+/* Package Grid Layout */
+.package-grid {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.package-card {
+  background-color: #fff;
+  border-radius: 10px;
+  width: 300px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transform: translateY(20px);
+  opacity: 0;
+  animation: fadeInUp 0.6s forwards;
+  transition: transform 0.3s ease-in-out;
+}
+
+.package-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  transition: transform 0.5s ease-in-out;
+}
+
+.package-card:hover {
+  transform: translateY(-10px);
+}
+
+.package-card:hover img {
+  transform: scale(1.05);
+}
+
+.package-card .card-content {
+  padding: 20px;
+}
+
+.package-card h3 {
+  font-size: 1.8rem;
+  color: #ff6f61;
+}
+
+.package-card p {
+  font-size: 1rem;
+  color: #495057;
+  margin: 15px 0;
+}
+
+/* Payment and Booking Section */
+.payment {
+  padding: 40px 15px;
+  background-color: #f8f9fa;
+  text-align: center;
+}
+
+.payment h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+  color: #495057;
+}
+
+.payment-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: slideIn 0.7s forwards;
+}
+
+.payment-form label {
+  font-size: 1rem;
+  color: #495057;
+  margin-bottom: 5px;
+}
+
+.payment-form input,
+.payment-form select,
+.payment-form button {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  font-size: 1.1rem;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+  outline: none;
+}
+
+.payment-form button {
+  background-color: #ff6f61;
+  color: #fff;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.payment-form button:hover {
+  background-color: #ff4a3c;
+}
+
+/* Footer Section */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #343a40;
+  color: #fff;
+  margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeInUp 0.6s forwards;
+}
+
+.animate-slide-in {
+  animation: slideIn 0.7s forwards;
+}

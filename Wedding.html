@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wedding Packages</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <!-- Header Section -->
+    <header class="header">
+      <h1>Dream Wedding Packages</h1>
+      <p>Choose the perfect package to make your special day unforgettable!</p>
+    </header>
+
+    <!-- Wedding Packages Section -->
+    <section class="packages">
+      <h2>Our Wedding Categories</h2>
+      <div class="package-grid">
+        <!-- Low Budget -->
+        <div class="package-card animate-fade-in">
+          <img src="Images\wedding image2.jpg" alt="Low Budget Wedding" />
+          <div class="card-content">
+            <h3>Low Budget</h3>
+            <p>
+              Elegant setups starting at <strong>₹30,000</strong>. Ideal for
+              intimate celebrations.
+            </p>
+          </div>
+        </div>
+        <!-- Medium Budget -->
+        <div class="package-card animate-fade-in">
+          <img src="Images\wedding image4.jpg" alt="Medium Budget Wedding" />
+          <div class="card-content">
+            <h3>Medium Budget</h3>
+            <p>
+              Premium services starting at <strong>₹60,000</strong>. Perfect for
+              a balanced experience.
+            </p>
+          </div>
+        </div>
+        <!-- High Budget -->
+        <div class="package-card animate-fade-in">
+          <img src="Images\wedding image3.jpg" alt="High Budget Wedding" />
+          <div class="card-content">
+            <h3>High Budget</h3>
+            <p>
+              Luxurious packages starting at <strong>₹1,00,000</strong>. Make it
+              a grand affair.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Payment and Booking Section -->
+    <section class="payment">
+      <h2>Secure Your Booking</h2>
+      <form class="payment-form animate-slide-in">
+        <label for="name">Full Name:</label>
+        <input type="text" id="name" placeholder="Your Name" required />
+
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" placeholder="Your Email" required />
+
+        <label for="budget">Select Your Package:</label>
+        <select id="budget" required>
+          <option value="low">Low Budget (₹30,000)</option>
+          <option value="medium">Medium Budget (₹60,000)</option>
+          <option value="high">High Budget (₹1,00,000)</option>
+        </select>
+
+        <button type="submit">Submit</button>
+      </form>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2023 Dream Wedding Planner. All rights reserved.</p>
+    </footer>
+  </body>
+</html>

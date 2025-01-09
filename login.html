@@ -1,0 +1,70 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title>Login Form</title>
+    <link rel="stylesheet" href="ramya.css">
+    <script defer src="script.js"></script>
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+   <div class="main">
+       <div class="form-box">
+            <div class="button-box">
+            <div id="btn"></div>
+            <button id="navbar" type="button" class="toggle-btn" onclick="login()">Log In</button>
+            <button id="navbar" type="button" class="toggle-btn" onclick="register()">Register</button>
+            </div>
+           <form  id="login" class="input-group" action="index.html" method="POST">
+           <input type= "text" class="input-field" placeholder="Enter Username" required>
+               <input type= "text" class="input-field" placeholder="Enter Password" required>
+
+               <input type="checkbox" class="check-box"><span>Remember Password</span>
+               <button type="submit" class="submit-btn">Login </button>
+           </form>
+
+           <form  action="reg.php" method="POST" id="register" class="input-group">
+            <input type= "text" class="input-field" id="username" name="username" placeholder="Enter Username" required>
+            <input type= "email" class="input-field" id="email" name="email" placeholder="Enter Email-Id" required>
+               <input type= "number" class="input-field" id="phone" name="phone" placeholder="phone number" required>
+               <input type= "text" class="input-field" id="password" name="password" placeholder="Enter Password" required>
+
+               <!-- <input type= "text" class="input-field" placeholder="Enter Student Name" required>
+               <input type= "text" class="input-field" placeholder="Enter Father's Name" required>
+               <input type= "text" class="input-field" placeholder="Enter Student's Phone number" required>
+               <input type= "text" class="input-field" placeholder="Enter Father's Phone Number" required> 
+               <input type= "text" class="input-field" placeholder="Enter City" required>
+               <input type= "text" class="input-field" placeholder="Enter Country" required> -->
+               <input type="checkbox" class="check-box"><span>I agree to the terms and conditions</span>
+               <button type="submit" class="submit-btn">Register</button>
+           </form>
+       </div>
+    </div>
+    <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+        
+        function register(){
+            x.style.left = "-400px";
+            y.style.left = "50px";
+            z.style.left = "110px";
+        }
+    
+        function login(){
+            x.style.left = "50px";
+            y.style.left = "450px";
+            z.style.left = "0";
+        }
+
+        window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-50px";
+  }
+}
+    </script>
+</body> 
+</html>
